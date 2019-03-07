@@ -2,8 +2,8 @@ import time
 account = 0
 
 class MyBank:
-
     def __init__(self):
+        print('')
         print('--------$$$ Welcome to MyBank $$$-----------')
         print('------------------------------------------')
         print("It looks like you don't have an account with us.")
@@ -49,21 +49,24 @@ class MyBank:
             print('Invalid Input')
             time.sleep(2)
             self.menu()
-        
 
     def deposit(self):
         global account
         user_input = eval(input('Enter Deposit Amount: $'))
         account += user_input
+        self.menu()
 
     def withdraw(self):
         global account
         user_input = eval(input('How much would you like to withdraw?: $'))
         account -= user_input
+        self.menu()
 
     def balance(self):
         global account
-        print('Your current balance is %d' % account)
+        print('============================')
+        print('Your current balance is: $%d' % account)
+        self.menu()
 
 bank = MyBank()
 bank.menu()
