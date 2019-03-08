@@ -24,6 +24,7 @@ class MyBank:
         user_input = eval(input('Enter Amount: $'))
         account = user_input
         print('Your current balance is: $%d ' % account)
+        time.sleep(2)
 
     def menu(self):
         print('------------------------')
@@ -54,18 +55,22 @@ class MyBank:
         global account
         user_input = eval(input('Enter Deposit Amount: $'))
         account += user_input
+        print("Your money's been successfully deposited")
+        time.sleep(1)
         self.menu()
 
     def withdraw(self):
         global account
         user_input = eval(input('How much would you like to withdraw?: $'))
         account -= user_input
+        time.sleep(1)
         self.menu()
 
     def balance(self):
         global account
         print('============================')
         print('Your current balance is: $%d' % account)
+        time.sleep(1)
         self.menu()
 
 bank = MyBank()
