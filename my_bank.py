@@ -45,6 +45,8 @@ class MyBank:
         elif user_input == 3:
             self.balance()
         elif user_input == 4:
+            print('Good Bye')
+            time.sleep(2)
             exit()
         else:
             print('Invalid Input')
@@ -75,11 +77,3 @@ class MyBank:
 
 bank = MyBank()
 bank.menu()
-# bank.getAmountFromConsole()
-# print(account)
-# bank.deposit()
-# print(account)
-# bank.withdraw()
-# print(account)
-# bank.balance()
-
